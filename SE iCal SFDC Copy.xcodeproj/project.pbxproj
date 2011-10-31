@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E661E70514594B6C00D7D745 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E661E70414594B6C00D7D745 /* Cocoa.framework */; };
+		E661E70F14594B6C00D7D745 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E661E70D14594B6C00D7D745 /* InfoPlist.strings */; };
+		E661E71214594B6C00D7D745 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E71114594B6C00D7D745 /* main.m */; };
+		E661E71514594B6C00D7D745 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E661E71314594B6C00D7D745 /* Credits.rtf */; };
+		E661E71814594B6C00D7D745 /* SE_iCal_SFDC_CopyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E71714594B6C00D7D745 /* SE_iCal_SFDC_CopyAppDelegate.m */; };
+		E661E71B14594B6C00D7D745 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E661E71914594B6C00D7D745 /* MainMenu.xib */; };
+		E661E72314594BA700D7D745 /* iCalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E72214594BA700D7D745 /* iCalTableViewController.m */; };
+		E661E7CE14594CF200D7D745 /* zkAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E78C14594CF200D7D745 /* zkAuthentication.m */; };
+		E661E7CF14594CF200D7D745 /* zkBaseClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E78E14594CF200D7D745 /* zkBaseClient.m */; };
+		E661E7D014594CF200D7D745 /* zkChildRelationship.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E79014594CF200D7D745 /* zkChildRelationship.m */; };
+		E661E7D114594CF200D7D745 /* zkDescribeField.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E79214594CF200D7D745 /* zkDescribeField.m */; };
+		E661E7D214594CF200D7D745 /* zkDescribeGlobalSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E79414594CF200D7D745 /* zkDescribeGlobalSObject.m */; };
+		E661E7D314594CF200D7D745 /* ZKDescribeLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E79614594CF200D7D745 /* ZKDescribeLayout.m */; };
+		E661E7D414594CF200D7D745 /* ZKDescribeLayoutButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E79814594CF200D7D745 /* ZKDescribeLayoutButton.m */; };
+		E661E7D514594CF200D7D745 /* ZKDescribeLayoutButtonSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E79A14594CF200D7D745 /* ZKDescribeLayoutButtonSection.m */; };
+		E661E7D614594CF200D7D745 /* ZKDescribeLayoutComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E79C14594CF200D7D745 /* ZKDescribeLayoutComponent.m */; };
+		E661E7D714594CF200D7D745 /* ZKDescribeLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E79E14594CF200D7D745 /* ZKDescribeLayoutItem.m */; };
+		E661E7D814594CF200D7D745 /* ZKDescribeLayoutResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7A014594CF200D7D745 /* ZKDescribeLayoutResult.m */; };
+		E661E7D914594CF200D7D745 /* ZKDescribeLayoutRow.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7A214594CF200D7D745 /* ZKDescribeLayoutRow.m */; };
+		E661E7DA14594CF200D7D745 /* ZKDescribeLayoutSection.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7A414594CF200D7D745 /* ZKDescribeLayoutSection.m */; };
+		E661E7DB14594CF200D7D745 /* zkDescribeSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7A614594CF200D7D745 /* zkDescribeSObject.m */; };
+		E661E7DC14594CF200D7D745 /* zkEnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7A814594CF200D7D745 /* zkEnvelope.m */; };
+		E661E7DD14594CF200D7D745 /* zkLoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7AA14594CF200D7D745 /* zkLoginResult.m */; };
+		E661E7DE14594CF200D7D745 /* zkParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7AC14594CF200D7D745 /* zkParser.m */; };
+		E661E7DF14594CF200D7D745 /* ZKPartnerEnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7AE14594CF200D7D745 /* ZKPartnerEnvelope.m */; };
+		E661E7E014594CF200D7D745 /* ZKPicklistEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7B014594CF200D7D745 /* ZKPicklistEntry.m */; };
+		E661E7E114594CF200D7D745 /* ZKPicklistForRecordType.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7B214594CF200D7D745 /* ZKPicklistForRecordType.m */; };
+		E661E7E214594CF200D7D745 /* zkQueryResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7B414594CF200D7D745 /* zkQueryResult.m */; };
+		E661E7E314594CF200D7D745 /* zkQueryResult_NSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7B614594CF200D7D745 /* zkQueryResult_NSTableView.m */; };
+		E661E7E414594CF200D7D745 /* ZKRecordTypeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7B814594CF200D7D745 /* ZKRecordTypeInfo.m */; };
+		E661E7E514594CF200D7D745 /* ZKRecordTypeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7BA14594CF200D7D745 /* ZKRecordTypeMapping.m */; };
+		E661E7E614594CF200D7D745 /* ZKRelatedList.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7BC14594CF200D7D745 /* ZKRelatedList.m */; };
+		E661E7E714594CF200D7D745 /* ZKRelatedListColumn.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7BE14594CF200D7D745 /* ZKRelatedListColumn.m */; };
+		E661E7E814594CF200D7D745 /* ZKRelatedListSort.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7C014594CF200D7D745 /* ZKRelatedListSort.m */; };
+		E661E7E914594CF200D7D745 /* zkSaveResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7C214594CF200D7D745 /* zkSaveResult.m */; };
+		E661E7EA14594CF200D7D745 /* zkSforceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7C514594CF200D7D745 /* zkSforceClient.m */; };
+		E661E7EB14594CF200D7D745 /* zkSoapException.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7C714594CF200D7D745 /* zkSoapException.m */; };
+		E661E7EC14594CF200D7D745 /* zkSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7C914594CF200D7D745 /* zkSObject.m */; };
+		E661E7ED14594CF200D7D745 /* zkUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7CB14594CF200D7D745 /* zkUserInfo.m */; };
+		E661E7EE14594CF200D7D745 /* zkXmlDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7CD14594CF200D7D745 /* zkXmlDeserializer.m */; };
+		E661E7F814594E1D00D7D745 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E661E7F714594E1D00D7D745 /* libxml2.2.dylib */; };
+		E661E7FA145964F700D7D745 /* CalendarStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E661E7F9145964F700D7D745 /* CalendarStore.framework */; };
+		E661E7FD1459C22C00D7D745 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E7FC1459C22C00D7D745 /* Utils.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E661E70014594B6C00D7D745 /* SE iCal SFDC Copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SE iCal SFDC Copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E661E70414594B6C00D7D745 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E661E70714594B6C00D7D745 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E661E70814594B6C00D7D745 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E661E70914594B6C00D7D745 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E661E70C14594B6C00D7D745 /* SE iCal SFDC Copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SE iCal SFDC Copy-Info.plist"; sourceTree = "<group>"; };
+		E661E70E14594B6C00D7D745 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E661E71014594B6C00D7D745 /* SE iCal SFDC Copy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SE iCal SFDC Copy-Prefix.pch"; sourceTree = "<group>"; };
+		E661E71114594B6C00D7D745 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E661E71414594B6C00D7D745 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E661E71614594B6C00D7D745 /* SE_iCal_SFDC_CopyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SE_iCal_SFDC_CopyAppDelegate.h; sourceTree = "<group>"; };
+		E661E71714594B6C00D7D745 /* SE_iCal_SFDC_CopyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SE_iCal_SFDC_CopyAppDelegate.m; sourceTree = "<group>"; };
+		E661E71A14594B6C00D7D745 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E661E72114594BA700D7D745 /* iCalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCalTableViewController.h; sourceTree = "<group>"; };
+		E661E72214594BA700D7D745 /* iCalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCalTableViewController.m; sourceTree = "<group>"; };
+		E661E78B14594CF200D7D745 /* zkAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkAuthentication.h; sourceTree = "<group>"; };
+		E661E78C14594CF200D7D745 /* zkAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkAuthentication.m; sourceTree = "<group>"; };
+		E661E78D14594CF200D7D745 /* zkBaseClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkBaseClient.h; sourceTree = "<group>"; };
+		E661E78E14594CF200D7D745 /* zkBaseClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkBaseClient.m; sourceTree = "<group>"; };
+		E661E78F14594CF200D7D745 /* zkChildRelationship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkChildRelationship.h; sourceTree = "<group>"; };
+		E661E79014594CF200D7D745 /* zkChildRelationship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkChildRelationship.m; sourceTree = "<group>"; };
+		E661E79114594CF200D7D745 /* zkDescribeField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkDescribeField.h; sourceTree = "<group>"; };
+		E661E79214594CF200D7D745 /* zkDescribeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkDescribeField.m; sourceTree = "<group>"; };
+		E661E79314594CF200D7D745 /* zkDescribeGlobalSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkDescribeGlobalSObject.h; sourceTree = "<group>"; };
+		E661E79414594CF200D7D745 /* zkDescribeGlobalSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkDescribeGlobalSObject.m; sourceTree = "<group>"; };
+		E661E79514594CF200D7D745 /* ZKDescribeLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDescribeLayout.h; sourceTree = "<group>"; };
+		E661E79614594CF200D7D745 /* ZKDescribeLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDescribeLayout.m; sourceTree = "<group>"; };
+		E661E79714594CF200D7D745 /* ZKDescribeLayoutButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDescribeLayoutButton.h; sourceTree = "<group>"; };
+		E661E79814594CF200D7D745 /* ZKDescribeLayoutButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDescribeLayoutButton.m; sourceTree = "<group>"; };
+		E661E79914594CF200D7D745 /* ZKDescribeLayoutButtonSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDescribeLayoutButtonSection.h; sourceTree = "<group>"; };
+		E661E79A14594CF200D7D745 /* ZKDescribeLayoutButtonSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDescribeLayoutButtonSection.m; sourceTree = "<group>"; };
+		E661E79B14594CF200D7D745 /* ZKDescribeLayoutComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDescribeLayoutComponent.h; sourceTree = "<group>"; };
+		E661E79C14594CF200D7D745 /* ZKDescribeLayoutComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDescribeLayoutComponent.m; sourceTree = "<group>"; };
+		E661E79D14594CF200D7D745 /* ZKDescribeLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDescribeLayoutItem.h; sourceTree = "<group>"; };
+		E661E79E14594CF200D7D745 /* ZKDescribeLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDescribeLayoutItem.m; sourceTree = "<group>"; };
+		E661E79F14594CF200D7D745 /* ZKDescribeLayoutResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDescribeLayoutResult.h; sourceTree = "<group>"; };
+		E661E7A014594CF200D7D745 /* ZKDescribeLayoutResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDescribeLayoutResult.m; sourceTree = "<group>"; };
+		E661E7A114594CF200D7D745 /* ZKDescribeLayoutRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDescribeLayoutRow.h; sourceTree = "<group>"; };
+		E661E7A214594CF200D7D745 /* ZKDescribeLayoutRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDescribeLayoutRow.m; sourceTree = "<group>"; };
+		E661E7A314594CF200D7D745 /* ZKDescribeLayoutSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKDescribeLayoutSection.h; sourceTree = "<group>"; };
+		E661E7A414594CF200D7D745 /* ZKDescribeLayoutSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKDescribeLayoutSection.m; sourceTree = "<group>"; };
+		E661E7A514594CF200D7D745 /* zkDescribeSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkDescribeSObject.h; sourceTree = "<group>"; };
+		E661E7A614594CF200D7D745 /* zkDescribeSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkDescribeSObject.m; sourceTree = "<group>"; };
+		E661E7A714594CF200D7D745 /* zkEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkEnvelope.h; sourceTree = "<group>"; };
+		E661E7A814594CF200D7D745 /* zkEnvelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkEnvelope.m; sourceTree = "<group>"; };
+		E661E7A914594CF200D7D745 /* zkLoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkLoginResult.h; sourceTree = "<group>"; };
+		E661E7AA14594CF200D7D745 /* zkLoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkLoginResult.m; sourceTree = "<group>"; };
+		E661E7AB14594CF200D7D745 /* zkParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkParser.h; sourceTree = "<group>"; };
+		E661E7AC14594CF200D7D745 /* zkParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkParser.m; sourceTree = "<group>"; };
+		E661E7AD14594CF200D7D745 /* ZKPartnerEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKPartnerEnvelope.h; sourceTree = "<group>"; };
+		E661E7AE14594CF200D7D745 /* ZKPartnerEnvelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKPartnerEnvelope.m; sourceTree = "<group>"; };
+		E661E7AF14594CF200D7D745 /* ZKPicklistEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKPicklistEntry.h; sourceTree = "<group>"; };
+		E661E7B014594CF200D7D745 /* ZKPicklistEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKPicklistEntry.m; sourceTree = "<group>"; };
+		E661E7B114594CF200D7D745 /* ZKPicklistForRecordType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKPicklistForRecordType.h; sourceTree = "<group>"; };
+		E661E7B214594CF200D7D745 /* ZKPicklistForRecordType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKPicklistForRecordType.m; sourceTree = "<group>"; };
+		E661E7B314594CF200D7D745 /* zkQueryResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkQueryResult.h; sourceTree = "<group>"; };
+		E661E7B414594CF200D7D745 /* zkQueryResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkQueryResult.m; sourceTree = "<group>"; };
+		E661E7B514594CF200D7D745 /* zkQueryResult_NSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkQueryResult_NSTableView.h; sourceTree = "<group>"; };
+		E661E7B614594CF200D7D745 /* zkQueryResult_NSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkQueryResult_NSTableView.m; sourceTree = "<group>"; };
+		E661E7B714594CF200D7D745 /* ZKRecordTypeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRecordTypeInfo.h; sourceTree = "<group>"; };
+		E661E7B814594CF200D7D745 /* ZKRecordTypeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRecordTypeInfo.m; sourceTree = "<group>"; };
+		E661E7B914594CF200D7D745 /* ZKRecordTypeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRecordTypeMapping.h; sourceTree = "<group>"; };
+		E661E7BA14594CF200D7D745 /* ZKRecordTypeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRecordTypeMapping.m; sourceTree = "<group>"; };
+		E661E7BB14594CF200D7D745 /* ZKRelatedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRelatedList.h; sourceTree = "<group>"; };
+		E661E7BC14594CF200D7D745 /* ZKRelatedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRelatedList.m; sourceTree = "<group>"; };
+		E661E7BD14594CF200D7D745 /* ZKRelatedListColumn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRelatedListColumn.h; sourceTree = "<group>"; };
+		E661E7BE14594CF200D7D745 /* ZKRelatedListColumn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRelatedListColumn.m; sourceTree = "<group>"; };
+		E661E7BF14594CF200D7D745 /* ZKRelatedListSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKRelatedListSort.h; sourceTree = "<group>"; };
+		E661E7C014594CF200D7D745 /* ZKRelatedListSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKRelatedListSort.m; sourceTree = "<group>"; };
+		E661E7C114594CF200D7D745 /* zkSaveResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkSaveResult.h; sourceTree = "<group>"; };
+		E661E7C214594CF200D7D745 /* zkSaveResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkSaveResult.m; sourceTree = "<group>"; };
+		E661E7C314594CF200D7D745 /* zkSforce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkSforce.h; sourceTree = "<group>"; };
+		E661E7C414594CF200D7D745 /* zkSforceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkSforceClient.h; sourceTree = "<group>"; };
+		E661E7C514594CF200D7D745 /* zkSforceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkSforceClient.m; sourceTree = "<group>"; };
+		E661E7C614594CF200D7D745 /* zkSoapException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkSoapException.h; sourceTree = "<group>"; };
+		E661E7C714594CF200D7D745 /* zkSoapException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkSoapException.m; sourceTree = "<group>"; };
+		E661E7C814594CF200D7D745 /* zkSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkSObject.h; sourceTree = "<group>"; };
+		E661E7C914594CF200D7D745 /* zkSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkSObject.m; sourceTree = "<group>"; };
+		E661E7CA14594CF200D7D745 /* zkUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkUserInfo.h; sourceTree = "<group>"; };
+		E661E7CB14594CF200D7D745 /* zkUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkUserInfo.m; sourceTree = "<group>"; };
+		E661E7CC14594CF200D7D745 /* zkXmlDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zkXmlDeserializer.h; sourceTree = "<group>"; };
+		E661E7CD14594CF200D7D745 /* zkXmlDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zkXmlDeserializer.m; sourceTree = "<group>"; };
+		E661E7F714594E1D00D7D745 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		E661E7F9145964F700D7D745 /* CalendarStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CalendarStore.framework; path = System/Library/Frameworks/CalendarStore.framework; sourceTree = SDKROOT; };
+		E661E7FB1459C22C00D7D745 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		E661E7FC1459C22C00D7D745 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E661E6FD14594B6500D7D745 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E661E7FA145964F700D7D745 /* CalendarStore.framework in Frameworks */,
+				E661E7F814594E1D00D7D745 /* libxml2.2.dylib in Frameworks */,
+				E661E70514594B6C00D7D745 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E661E6F514594B6500D7D745 = {
+			isa = PBXGroup;
+			children = (
+				E661E7F9145964F700D7D745 /* CalendarStore.framework */,
+				E661E7F714594E1D00D7D745 /* libxml2.2.dylib */,
+				E661E78A14594CF200D7D745 /* zkSforce */,
+				E661E70A14594B6C00D7D745 /* SE iCal SFDC Copy */,
+				E661E70314594B6C00D7D745 /* Frameworks */,
+				E661E70114594B6C00D7D745 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E661E70114594B6C00D7D745 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E661E70014594B6C00D7D745 /* SE iCal SFDC Copy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E661E70314594B6C00D7D745 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E661E70414594B6C00D7D745 /* Cocoa.framework */,
+				E661E70614594B6C00D7D745 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E661E70614594B6C00D7D745 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E661E70714594B6C00D7D745 /* AppKit.framework */,
+				E661E70814594B6C00D7D745 /* CoreData.framework */,
+				E661E70914594B6C00D7D745 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E661E70A14594B6C00D7D745 /* SE iCal SFDC Copy */ = {
+			isa = PBXGroup;
+			children = (
+				E661E71614594B6C00D7D745 /* SE_iCal_SFDC_CopyAppDelegate.h */,
+				E661E71714594B6C00D7D745 /* SE_iCal_SFDC_CopyAppDelegate.m */,
+				E661E71914594B6C00D7D745 /* MainMenu.xib */,
+				E661E72114594BA700D7D745 /* iCalTableViewController.h */,
+				E661E72214594BA700D7D745 /* iCalTableViewController.m */,
+				E661E70B14594B6C00D7D745 /* Supporting Files */,
+				E661E7FB1459C22C00D7D745 /* Utils.h */,
+				E661E7FC1459C22C00D7D745 /* Utils.m */,
+			);
+			path = "SE iCal SFDC Copy";
+			sourceTree = "<group>";
+		};
+		E661E70B14594B6C00D7D745 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E661E70C14594B6C00D7D745 /* SE iCal SFDC Copy-Info.plist */,
+				E661E70D14594B6C00D7D745 /* InfoPlist.strings */,
+				E661E71014594B6C00D7D745 /* SE iCal SFDC Copy-Prefix.pch */,
+				E661E71114594B6C00D7D745 /* main.m */,
+				E661E71314594B6C00D7D745 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E661E78A14594CF200D7D745 /* zkSforce */ = {
+			isa = PBXGroup;
+			children = (
+				E661E78B14594CF200D7D745 /* zkAuthentication.h */,
+				E661E78C14594CF200D7D745 /* zkAuthentication.m */,
+				E661E78D14594CF200D7D745 /* zkBaseClient.h */,
+				E661E78E14594CF200D7D745 /* zkBaseClient.m */,
+				E661E78F14594CF200D7D745 /* zkChildRelationship.h */,
+				E661E79014594CF200D7D745 /* zkChildRelationship.m */,
+				E661E79114594CF200D7D745 /* zkDescribeField.h */,
+				E661E79214594CF200D7D745 /* zkDescribeField.m */,
+				E661E79314594CF200D7D745 /* zkDescribeGlobalSObject.h */,
+				E661E79414594CF200D7D745 /* zkDescribeGlobalSObject.m */,
+				E661E79514594CF200D7D745 /* ZKDescribeLayout.h */,
+				E661E79614594CF200D7D745 /* ZKDescribeLayout.m */,
+				E661E79714594CF200D7D745 /* ZKDescribeLayoutButton.h */,
+				E661E79814594CF200D7D745 /* ZKDescribeLayoutButton.m */,
+				E661E79914594CF200D7D745 /* ZKDescribeLayoutButtonSection.h */,
+				E661E79A14594CF200D7D745 /* ZKDescribeLayoutButtonSection.m */,
+				E661E79B14594CF200D7D745 /* ZKDescribeLayoutComponent.h */,
+				E661E79C14594CF200D7D745 /* ZKDescribeLayoutComponent.m */,
+				E661E79D14594CF200D7D745 /* ZKDescribeLayoutItem.h */,
+				E661E79E14594CF200D7D745 /* ZKDescribeLayoutItem.m */,
+				E661E79F14594CF200D7D745 /* ZKDescribeLayoutResult.h */,
+				E661E7A014594CF200D7D745 /* ZKDescribeLayoutResult.m */,
+				E661E7A114594CF200D7D745 /* ZKDescribeLayoutRow.h */,
+				E661E7A214594CF200D7D745 /* ZKDescribeLayoutRow.m */,
+				E661E7A314594CF200D7D745 /* ZKDescribeLayoutSection.h */,
+				E661E7A414594CF200D7D745 /* ZKDescribeLayoutSection.m */,
+				E661E7A514594CF200D7D745 /* zkDescribeSObject.h */,
+				E661E7A614594CF200D7D745 /* zkDescribeSObject.m */,
+				E661E7A714594CF200D7D745 /* zkEnvelope.h */,
+				E661E7A814594CF200D7D745 /* zkEnvelope.m */,
+				E661E7A914594CF200D7D745 /* zkLoginResult.h */,
+				E661E7AA14594CF200D7D745 /* zkLoginResult.m */,
+				E661E7AB14594CF200D7D745 /* zkParser.h */,
+				E661E7AC14594CF200D7D745 /* zkParser.m */,
+				E661E7AD14594CF200D7D745 /* ZKPartnerEnvelope.h */,
+				E661E7AE14594CF200D7D745 /* ZKPartnerEnvelope.m */,
+				E661E7AF14594CF200D7D745 /* ZKPicklistEntry.h */,
+				E661E7B014594CF200D7D745 /* ZKPicklistEntry.m */,
+				E661E7B114594CF200D7D745 /* ZKPicklistForRecordType.h */,
+				E661E7B214594CF200D7D745 /* ZKPicklistForRecordType.m */,
+				E661E7B314594CF200D7D745 /* zkQueryResult.h */,
+				E661E7B414594CF200D7D745 /* zkQueryResult.m */,
+				E661E7B514594CF200D7D745 /* zkQueryResult_NSTableView.h */,
+				E661E7B614594CF200D7D745 /* zkQueryResult_NSTableView.m */,
+				E661E7B714594CF200D7D745 /* ZKRecordTypeInfo.h */,
+				E661E7B814594CF200D7D745 /* ZKRecordTypeInfo.m */,
+				E661E7B914594CF200D7D745 /* ZKRecordTypeMapping.h */,
+				E661E7BA14594CF200D7D745 /* ZKRecordTypeMapping.m */,
+				E661E7BB14594CF200D7D745 /* ZKRelatedList.h */,
+				E661E7BC14594CF200D7D745 /* ZKRelatedList.m */,
+				E661E7BD14594CF200D7D745 /* ZKRelatedListColumn.h */,
+				E661E7BE14594CF200D7D745 /* ZKRelatedListColumn.m */,
+				E661E7BF14594CF200D7D745 /* ZKRelatedListSort.h */,
+				E661E7C014594CF200D7D745 /* ZKRelatedListSort.m */,
+				E661E7C114594CF200D7D745 /* zkSaveResult.h */,
+				E661E7C214594CF200D7D745 /* zkSaveResult.m */,
+				E661E7C314594CF200D7D745 /* zkSforce.h */,
+				E661E7C414594CF200D7D745 /* zkSforceClient.h */,
+				E661E7C514594CF200D7D745 /* zkSforceClient.m */,
+				E661E7C614594CF200D7D745 /* zkSoapException.h */,
+				E661E7C714594CF200D7D745 /* zkSoapException.m */,
+				E661E7C814594CF200D7D745 /* zkSObject.h */,
+				E661E7C914594CF200D7D745 /* zkSObject.m */,
+				E661E7CA14594CF200D7D745 /* zkUserInfo.h */,
+				E661E7CB14594CF200D7D745 /* zkUserInfo.m */,
+				E661E7CC14594CF200D7D745 /* zkXmlDeserializer.h */,
+				E661E7CD14594CF200D7D745 /* zkXmlDeserializer.m */,
+			);
+			path = zkSforce;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E661E6FF14594B6500D7D745 /* SE iCal SFDC Copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E661E71E14594B6C00D7D745 /* Build configuration list for PBXNativeTarget "SE iCal SFDC Copy" */;
+			buildPhases = (
+				E661E6FC14594B6500D7D745 /* Sources */,
+				E661E6FD14594B6500D7D745 /* Frameworks */,
+				E661E6FE14594B6500D7D745 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SE iCal SFDC Copy";
+			productName = "SE iCal SFDC Copy";
+			productReference = E661E70014594B6C00D7D745 /* SE iCal SFDC Copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E661E6F714594B6500D7D745 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = E661E6FA14594B6500D7D745 /* Build configuration list for PBXProject "SE iCal SFDC Copy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E661E6F514594B6500D7D745;
+			productRefGroup = E661E70114594B6C00D7D745 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E661E6FF14594B6500D7D745 /* SE iCal SFDC Copy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E661E6FE14594B6500D7D745 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E661E70F14594B6C00D7D745 /* InfoPlist.strings in Resources */,
+				E661E71514594B6C00D7D745 /* Credits.rtf in Resources */,
+				E661E71B14594B6C00D7D745 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E661E6FC14594B6500D7D745 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E661E71214594B6C00D7D745 /* main.m in Sources */,
+				E661E71814594B6C00D7D745 /* SE_iCal_SFDC_CopyAppDelegate.m in Sources */,
+				E661E72314594BA700D7D745 /* iCalTableViewController.m in Sources */,
+				E661E7CE14594CF200D7D745 /* zkAuthentication.m in Sources */,
+				E661E7CF14594CF200D7D745 /* zkBaseClient.m in Sources */,
+				E661E7D014594CF200D7D745 /* zkChildRelationship.m in Sources */,
+				E661E7D114594CF200D7D745 /* zkDescribeField.m in Sources */,
+				E661E7D214594CF200D7D745 /* zkDescribeGlobalSObject.m in Sources */,
+				E661E7D314594CF200D7D745 /* ZKDescribeLayout.m in Sources */,
+				E661E7D414594CF200D7D745 /* ZKDescribeLayoutButton.m in Sources */,
+				E661E7D514594CF200D7D745 /* ZKDescribeLayoutButtonSection.m in Sources */,
+				E661E7D614594CF200D7D745 /* ZKDescribeLayoutComponent.m in Sources */,
+				E661E7D714594CF200D7D745 /* ZKDescribeLayoutItem.m in Sources */,
+				E661E7D814594CF200D7D745 /* ZKDescribeLayoutResult.m in Sources */,
+				E661E7D914594CF200D7D745 /* ZKDescribeLayoutRow.m in Sources */,
+				E661E7DA14594CF200D7D745 /* ZKDescribeLayoutSection.m in Sources */,
+				E661E7DB14594CF200D7D745 /* zkDescribeSObject.m in Sources */,
+				E661E7DC14594CF200D7D745 /* zkEnvelope.m in Sources */,
+				E661E7DD14594CF200D7D745 /* zkLoginResult.m in Sources */,
+				E661E7DE14594CF200D7D745 /* zkParser.m in Sources */,
+				E661E7DF14594CF200D7D745 /* ZKPartnerEnvelope.m in Sources */,
+				E661E7E014594CF200D7D745 /* ZKPicklistEntry.m in Sources */,
+				E661E7E114594CF200D7D745 /* ZKPicklistForRecordType.m in Sources */,
+				E661E7E214594CF200D7D745 /* zkQueryResult.m in Sources */,
+				E661E7E314594CF200D7D745 /* zkQueryResult_NSTableView.m in Sources */,
+				E661E7E414594CF200D7D745 /* ZKRecordTypeInfo.m in Sources */,
+				E661E7E514594CF200D7D745 /* ZKRecordTypeMapping.m in Sources */,
+				E661E7E614594CF200D7D745 /* ZKRelatedList.m in Sources */,
+				E661E7E714594CF200D7D745 /* ZKRelatedListColumn.m in Sources */,
+				E661E7E814594CF200D7D745 /* ZKRelatedListSort.m in Sources */,
+				E661E7E914594CF200D7D745 /* zkSaveResult.m in Sources */,
+				E661E7EA14594CF200D7D745 /* zkSforceClient.m in Sources */,
+				E661E7EB14594CF200D7D745 /* zkSoapException.m in Sources */,
+				E661E7EC14594CF200D7D745 /* zkSObject.m in Sources */,
+				E661E7ED14594CF200D7D745 /* zkUserInfo.m in Sources */,
+				E661E7EE14594CF200D7D745 /* zkXmlDeserializer.m in Sources */,
+				E661E7FD1459C22C00D7D745 /* Utils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E661E70D14594B6C00D7D745 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E661E70E14594B6C00D7D745 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E661E71314594B6C00D7D745 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E661E71414594B6C00D7D745 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E661E71914594B6C00D7D745 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E661E71A14594B6C00D7D745 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E661E71C14594B6C00D7D745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E661E71D14594B6C00D7D745 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E661E71F14594B6C00D7D745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SE iCal SFDC Copy/SE iCal SFDC Copy-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "SE iCal SFDC Copy/SE iCal SFDC Copy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E661E72014594B6C00D7D745 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SE iCal SFDC Copy/SE iCal SFDC Copy-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "SE iCal SFDC Copy/SE iCal SFDC Copy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E661E6FA14594B6500D7D745 /* Build configuration list for PBXProject "SE iCal SFDC Copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E661E71C14594B6C00D7D745 /* Debug */,
+				E661E71D14594B6C00D7D745 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E661E71E14594B6C00D7D745 /* Build configuration list for PBXNativeTarget "SE iCal SFDC Copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E661E71F14594B6C00D7D745 /* Debug */,
+				E661E72014594B6C00D7D745 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E661E6F714594B6500D7D745 /* Project object */;
+}
