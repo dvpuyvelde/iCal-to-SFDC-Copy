@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E628A30F146082B500896134 /* datePicker16.gif in Resources */ = {isa = PBXBuildFile; fileRef = E628A30E146082B500896134 /* datePicker16.gif */; };
 		E661E70514594B6C00D7D745 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E661E70414594B6C00D7D745 /* Cocoa.framework */; };
 		E661E70F14594B6C00D7D745 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E661E70D14594B6C00D7D745 /* InfoPlist.strings */; };
 		E661E71214594B6C00D7D745 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E71114594B6C00D7D745 /* main.m */; };
@@ -53,6 +54,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E628A30E146082B500896134 /* datePicker16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = datePicker16.gif; sourceTree = "<group>"; };
 		E661E70014594B6C00D7D745 /* SE iCal SFDC Copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SE iCal SFDC Copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E661E70414594B6C00D7D745 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E661E70714594B6C00D7D745 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -197,6 +199,7 @@
 		E661E70A14594B6C00D7D745 /* SE iCal SFDC Copy */ = {
 			isa = PBXGroup;
 			children = (
+				E628A30E146082B500896134 /* datePicker16.gif */,
 				E661E71614594B6C00D7D745 /* SE_iCal_SFDC_CopyAppDelegate.h */,
 				E661E71714594B6C00D7D745 /* SE_iCal_SFDC_CopyAppDelegate.m */,
 				E661E71914594B6C00D7D745 /* MainMenu.xib */,
@@ -345,6 +348,7 @@
 				E661E70F14594B6C00D7D745 /* InfoPlist.strings in Resources */,
 				E661E71514594B6C00D7D745 /* Credits.rtf in Resources */,
 				E661E71B14594B6C00D7D745 /* MainMenu.xib in Resources */,
+				E628A30F146082B500896134 /* datePicker16.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

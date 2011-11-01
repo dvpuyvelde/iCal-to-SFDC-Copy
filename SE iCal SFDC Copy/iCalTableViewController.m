@@ -12,11 +12,12 @@
 #import "zkSObject.h"
 #import "zkSforceClient.h"
 #import "zkLoginResult.h"
+#import "zkQueryResult.h"
 #import "Utils.h"
 
 @implementation iCalTableViewController
 
-@synthesize list, client, selectedrows, selectall, parentwindow;
+@synthesize list, client, selectedrows, selectall, parentwindow, salesforceevents;
 
 
 -(id) init {
@@ -41,6 +42,7 @@
     [startDatePicker setDateValue:[Utils startOfWeek]];
     [endDatePicker setDateValue:[Utils endOfWeek]];
     [self setSelectedrows:[[NSMutableSet alloc] init]];
+    [self setSalesforceevents:[[NSMutableSet alloc] init]];
     [self setSelectall:0];
     [self getCalEvents:nil]; //get the iCal events
 }
@@ -49,6 +51,7 @@
     [client release];
     [list release];
     [selectedrows release];
+    [salesforceevents release];
     [super dealloc];
 }
 
@@ -59,6 +62,7 @@
 -(id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     CalEvent *ev = [list objectAtIndex:row];
     NSString *identifier = [tableColumn identifier];
+    //for the selectbox column
     if([identifier isEqualToString:@"selectbox"]) {
         if([selectedrows containsObject:ev]) {
             return [NSNumber numberWithInt:NSOnState];
@@ -67,14 +71,55 @@
             return [NSNumber numberWithInt:NSOffState];
         }
     }
+    //for the image column
+    if([identifier isEqualToString:@"sfdc"]) {
+        //make sure to trim the title (subject) because salesforce will have trimmed them upon save (iCal doesn't)
+        NSString *trimmedtitle = [[ev title] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSString *localkey = [[[NSString alloc] initWithFormat:@"%@_%@", [Utils formatDateTimeAsStringUTC:[ev startDate]], trimmedtitle] autorelease];
+        if([salesforceevents member:localkey] == nil) {
+            return nil;
+        }
+        else {
+            return [NSImage imageNamed:@"datePicker16.gif"];
+        }
+    }
+    //for all other columns
     return [ev valueForKey:identifier];
 }
 
 
 
+//delegate method that helps us color specific rows
+- (NSCell *)tableView:(NSTableView *)tableView dataCellForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NSCell *cell = [tableColumn dataCell];
+    if([cell isKindOfClass:[NSTextFieldCell class]]) {
+        CalEvent *ev = [list objectAtIndex:row];
+        //calculate what the 'key' for this event would be
+        
+        //make sure to trim the title (subject) because salesforce will have trimmed them upon save (iCal doesn't)
+        NSString *trimmedtitle = [[ev title] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        NSString *localkey = [[[NSString alloc] initWithFormat:@"%@_%@", [Utils formatDateTimeAsStringUTC:[ev startDate]], trimmedtitle] autorelease];
+        //NSLog(@"Match : %@", localkey);
+        NSTextFieldCell *textcell = [tableColumn dataCell];
+        //set the color to red if they're not yet in salesforce
+        if([salesforceevents member:localkey] == nil) {
+            [textcell setTextColor: [NSColor blackColor]];
+        }
+        else {
+            [textcell setTextColor: [NSColor grayColor]];
+        }
+    }
+    return cell;
+}
 
 
 -(IBAction)getCalEvents:(id)sender {
+    //reset existing sets and arrays
+    [salesforceevents removeAllObjects];
+    [selectedrows removeAllObjects];
+    [selectAllCheckbox setState:0];
+    
     // Create a predicate to fetch all events
     NSDate *startDate = [startDatePicker dateValue];
     NSDate *endDate = [endDatePicker dateValue];
@@ -86,7 +131,25 @@
     [self setList:[[CalCalendarStore defaultCalendarStore] eventsWithPredicate:eventsForThisYear]];
 
     
+    //query salesforce for Events in the same interval
+    NSString *activitiesquery = [[NSString alloc ] initWithFormat:@"select Id, Subject, ActivityDateTime from Event where ActivityDate >=%@ and ActivityDate <=%@ order by StartDateTime limit 200", [Utils formatDateAsString:startDate], [Utils formatDateAsString:endDate]];
+    ZKQueryResult *qr = [client query:activitiesquery];
+    
+    //drop them in the salesforce events set.
+    for(ZKSObject *sfdcEvent in [qr records]) {
+        //let's create a fake key to compare : startdatetimeinutc_subject
+        //stringByTrimmingCharactersInSet:
+        //[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+       // NSString *trimmedsubject = [[sfdcEvent fieldValue:@"Subject"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSString *eventkey = [[NSString alloc ] initWithFormat:@"%@_%@", [sfdcEvent fieldValue:@"ActivityDateTime"], [sfdcEvent fieldValue:@"Subject"]];
+        NSLog(@"Added eventkey : >%@<", eventkey);
+        [salesforceevents addObject:eventkey];
+        [eventkey release];
+    }
+    
     [tableView reloadData];
+    [activitiesquery release];
 }
 
 
@@ -106,7 +169,7 @@
         ZKSObject *saveObj = [[ZKSObject alloc] initWithType:@"Event"];
         [saveObj setFieldValue:[ev title] field:@"Subject"];
         [saveObj setFieldValue:[ev location] field:@"Location"];
-        [saveObj setFieldValue:[ev description] field:@"Description"];
+        [saveObj setFieldValue:[ev notes] field:@"Description"];
         [saveObj setFieldDateTimeValue:[ev startDate] field:@"ActivityDateTime"];
         
         //calculate meeting length
@@ -120,6 +183,7 @@
         [saveobjects addObject:saveObj];
         [saveObj release];
     }
+
     
     NSArray *results = [client create:[NSArray arrayWithObject:saveobjects]];
     
@@ -147,10 +211,13 @@
     }
     
     [self alert:message details:details];
-         
+    
+    [self getCalEvents:nil];
+    
     [message release];
     [details release];
     [saveobjects release];
+    
 }
 
 
@@ -158,16 +225,14 @@
 - (IBAction)previousButtonClick:(id)sender {
     [startDatePicker setDateValue:[Utils substractOneWeek:[startDatePicker dateValue]]];
     [endDatePicker setDateValue:[Utils substractOneWeek:[endDatePicker dateValue]]];
-    [selectedrows removeAllObjects];
-    [selectAllCheckbox setState:0];
+    
     [self getCalEvents:nil];
 }
 
 - (IBAction)nextButtonClick:(id)sender {
     [startDatePicker setDateValue:[Utils addOneWeek:[startDatePicker dateValue]]];
     [endDatePicker setDateValue:[Utils addOneWeek:[endDatePicker dateValue]]];
-    [selectedrows removeAllObjects];
-    [selectAllCheckbox setState:0];
+
     [self getCalEvents:nil];    
 }
 
@@ -186,7 +251,6 @@
 
 //when the 'select all' button is clicked
 - (IBAction)selectAllClicked:(id)sender {
-    NSLog(@"State : %ld", [selectAllCheckbox state]);
     if([selectAllCheckbox state] == 1) {
         [selectedrows addObjectsFromArray:[self list]];
     }

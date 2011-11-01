@@ -18,6 +18,7 @@
     IBOutlet NSButtonCell *selectAllCheckbox;
     NSArray *list;
     NSMutableSet *selectedrows;
+    NSMutableSet *salesforceevents;
     NSInteger selectall;
     IBOutlet NSWindow *parentwindow;
     ZKSforceClient *client;
@@ -29,6 +30,7 @@
 
 @property (retain) NSArray *list;
 @property (retain) NSMutableSet *selectedrows;
+@property (retain) NSMutableSet *salesforceevents;
 @property (assign) NSInteger selectall;
 @property (retain) ZKSforceClient *client;
 @property (retain) NSWindow *parentwindow;
