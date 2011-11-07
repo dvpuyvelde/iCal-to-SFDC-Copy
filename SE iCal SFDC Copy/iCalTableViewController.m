@@ -94,8 +94,8 @@
     NSCell *cell = [tableColumn dataCell];
     if([cell isKindOfClass:[NSTextFieldCell class]]) {
         CalEvent *ev = [list objectAtIndex:row];
-        //calculate what the 'key' for this event would be
         
+        //calculate what the 'key' for this event would be        
         //make sure to trim the title (subject) because salesforce will have trimmed them upon save (iCal doesn't)
         NSString *trimmedtitle = [[ev title] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
@@ -130,9 +130,10 @@
     // Fetch all events
     [self setList:[[CalCalendarStore defaultCalendarStore] eventsWithPredicate:eventsForThisYear]];
 
+    ZKUserInfo *userinfo = [client currentUserInfo];
     
     //query salesforce for Events in the same interval
-    NSString *activitiesquery = [[NSString alloc ] initWithFormat:@"select Id, Subject, ActivityDateTime from Event where ActivityDate >=%@ and ActivityDate <=%@ order by StartDateTime limit 200", [Utils formatDateAsString:startDate], [Utils formatDateAsString:endDate]];
+    NSString *activitiesquery = [[NSString alloc ] initWithFormat:@"select Id, Subject, ActivityDateTime from Event where OwnerId ='%@' and ActivityDate >=%@ and ActivityDate <=%@ order by StartDateTime limit 200", [userinfo userId], [Utils formatDateAsString:startDate], [Utils formatDateAsString:endDate]];
     ZKQueryResult *qr = [client query:activitiesquery];
     
     //drop them in the salesforce events set.
