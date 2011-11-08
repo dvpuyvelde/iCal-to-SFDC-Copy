@@ -25,6 +25,7 @@
     IBOutlet NSPanel *loginPanel;
     IBOutlet NSTextFieldCell *loginUsername;
     IBOutlet NSSecureTextFieldCell *loginPassword;
+    IBOutlet NSSecureTextField *loginTextField;
 }
 
 

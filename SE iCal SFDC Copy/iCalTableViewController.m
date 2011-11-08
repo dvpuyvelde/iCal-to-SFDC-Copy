@@ -34,6 +34,10 @@
     NSString *savedusername = [prefs stringForKey:@"username"];
     if(savedusername != nil) {
         [loginUsername setTitle:savedusername];
+        //[parentwindow makeFirstResponder:loginPanel];
+        [loginPanel makeKeyWindow];
+        [parentwindow makeFirstResponder:loginPanel];
+        [loginPanel makeFirstResponder:loginTextField];
     }
 
 }

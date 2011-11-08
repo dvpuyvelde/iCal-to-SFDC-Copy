@@ -15,8 +15,6 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
-    //LoginWindowController *con = [[LoginWindowController alloc] initWithWindowNibName:@"LoginWindow"];
-    //[NSApp runModalForWindow:con];
 }
 
 @end
