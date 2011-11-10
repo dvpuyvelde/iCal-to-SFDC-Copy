@@ -57,7 +57,7 @@
 /* Begin PBXFileReference section */
 		E60444551468635B003446D1 /* AppLogo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppLogo.icns; sourceTree = "<group>"; };
 		E628A30E146082B500896134 /* datePicker16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = datePicker16.gif; sourceTree = "<group>"; };
-		E661E70014594B6C00D7D745 /* SE iCal SFDC Copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SE iCal SFDC Copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E661E70014594B6C00D7D745 /* iCal2Salesforce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCal2Salesforce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E661E70414594B6C00D7D745 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E661E70714594B6C00D7D745 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E661E70814594B6C00D7D745 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -174,7 +174,7 @@
 		E661E70114594B6C00D7D745 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E661E70014594B6C00D7D745 /* SE iCal SFDC Copy.app */,
+				E661E70014594B6C00D7D745 /* iCal2Salesforce.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -318,7 +318,7 @@
 			);
 			name = "SE iCal SFDC Copy";
 			productName = "SE iCal SFDC Copy";
-			productReference = E661E70014594B6C00D7D745 /* SE iCal SFDC Copy.app */;
+			productReference = E661E70014594B6C00D7D745 /* iCal2Salesforce.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -476,7 +476,7 @@
 				GCC_PREFIX_HEADER = "SE iCal SFDC Copy/SE iCal SFDC Copy-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "SE iCal SFDC Copy/SE iCal SFDC Copy-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iCal2Salesforce;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -492,7 +492,7 @@
 				GCC_PREFIX_HEADER = "SE iCal SFDC Copy/SE iCal SFDC Copy-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "SE iCal SFDC Copy/SE iCal SFDC Copy-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = iCal2Salesforce;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = app;
 			};

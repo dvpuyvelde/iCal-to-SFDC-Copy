@@ -14,6 +14,7 @@
 #import "zkLoginResult.h"
 #import "zkQueryResult.h"
 #import "Utils.h"
+#import "zkSoapException.h"
 
 @implementation iCalTableViewController
 
@@ -117,7 +118,7 @@
     return cell;
 }
 
-
+//main method : gets iCal and SFDC event data
 -(IBAction)getCalEvents:(id)sender {
     //reset existing sets and arrays
     [salesforceevents removeAllObjects];
@@ -131,7 +132,7 @@
     NSPredicate *eventsForThisYear = [CalCalendarStore eventPredicateWithStartDate:startDate endDate:endDate
                                                                          calendars:[[CalCalendarStore defaultCalendarStore] calendars]];
     
-    // Fetch all events
+    // Fetch iCal events
     [self setList:[[CalCalendarStore defaultCalendarStore] eventsWithPredicate:eventsForThisYear]];
 
     ZKUserInfo *userinfo = [client currentUserInfo];
@@ -164,6 +165,7 @@
     [calEventNotes setEditable:FALSE];
 }
 
+//save the selected events to salesforce
 - (IBAction)saveToSalesforce:(id)sender {
 
     NSMutableArray *saveobjects = [[NSMutableArray alloc] init ];
@@ -271,16 +273,18 @@
     client = [[ZKSforceClient alloc] init];
     NSString *un = [loginUsername title];
     NSString *pw = [loginPassword title];
-    //ZKLoginResult *lr = [client login:@"dvp@sdo1111.demo" password:@"sfdc1234"];
-    ZKLoginResult *lr = [client login:un password:pw];
-    NSLog(@"Logged in as : %@", [[lr userInfo] userName]);
-    
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    [prefs setValue:[[lr userInfo] userName] forKey:@"username"];
-    
-    //NSLog(@"Login button clicked : %@", [loginUsername title]);
-    [self loggedIn];
-    [loginPanel close];
+    ZKLoginResult *lr;
+    @try {
+         lr = [client login:un password:pw];
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setValue:[[lr userInfo] userName] forKey:@"username"];
+        [self loggedIn];
+        [loginPanel close];
+    }
+    @catch (ZKSoapException *ex) {
+        NSLog(@"Login error : %@", [ex faultCode]);
+        [self alert:@"Login Error" details:[NSMutableString stringWithString:[ex faultCode]]];
+    }
 }
 
 
