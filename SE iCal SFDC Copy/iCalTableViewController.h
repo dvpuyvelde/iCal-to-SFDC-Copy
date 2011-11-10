@@ -36,13 +36,13 @@
 @property (retain) ZKSforceClient *client;
 @property (retain) NSWindow *parentwindow;
 
+
 //table view datasource methods
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView;
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
 
 -(void)loggedIn;
 
-//button clicked
 - (IBAction)getCalEvents:(id)sender;
 - (IBAction)tableViewSelected:(id)sender;
 - (IBAction)saveToSalesforce:(id)sender;
@@ -51,7 +51,7 @@
 - (IBAction)selectBoxClicked:(id)sender;
 - (IBAction)selectAllClicked:(id)sender;
 - (IBAction)loginButtonClicked:(id)sender;
-
+- (IBAction)passwordEnterKey:(id)sender;
 -(void)alert:(NSString *) message details:(NSMutableString *) details;
 
 @end

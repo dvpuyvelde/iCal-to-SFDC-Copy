@@ -306,9 +306,8 @@
     NSLog(@"Alert returned");
 }
 
-
-
-
-
-
+//if someone enters in the pw field, perform the same action as if the login button was clicked
+- (IBAction)passwordEnterKey:(id)sender {
+    [self loginButtonClicked:sender];
+}
 @end
